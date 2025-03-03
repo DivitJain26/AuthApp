@@ -16,9 +16,7 @@ function App() {
                 <Route path="/signup" element={<SignUp/>} />
                 <Route path="/signin" element={<SignIn/>} />
 
-                <Route path="/" element={<ProtectedRoute/>}>
-                    <Route path="/dashboard" element={<DashBoard/>} />
-                </Route>
+                <Route path="/dashboard" element={<ProtectedRoute><DashBoard /></ProtectedRoute>} />
 
                 <Route path="*" element={<Navigate to="/signup" />} replace />
             </Routes>
