@@ -1,5 +1,5 @@
 import React from "react"
-import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom"
+import {HashRouter, Routes, Route, Navigate} from "react-router-dom"
 
 import SignIn from "../components/SignIn"
 import SignUp from "../components/SignUp"
@@ -9,7 +9,7 @@ import ProtectedRoute from "../services/ProtectedRoute"
 function App() {
   return (
     <>
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<Navigate to="/signup" />} />
 
@@ -20,7 +20,7 @@ function App() {
 
                 <Route path="*" element={<Navigate to="/signup" />} replace />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     </>
   )
 }
